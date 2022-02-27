@@ -2,7 +2,7 @@ EDUCATIONAL PROJECT "CHOCCO" <br>
 
 🍫 RESPONSIVE LANDING PAGE FOR A CHOCOLATE BAR STORE.  <BR>
 
-Technology stack and tools that were used:
+Technology stack and tools that were used:<BR>
 HTML5 <br>
 СSS3 <br>
 SASS <br>
