@@ -1,0 +1,48 @@
+.ingrid-menu {
+
+  display: none;
+  background-color: white;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  position: absolute;
+  z-index: 10;
+  left: 86px;
+
+  &:hover {
+    display: block;
+  }
+}
+
+
+
+
+
+.ingrid {
+  padding: 15px;
+}
+
+.ingrid-item {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+.ingridient-icon {
+  display: flex;
+  width: rem(30px);
+  height: rem(30px);
+  margin-right: 15px;
+}
+.ingid-name{
+  display: flex;
+  margin-right: 40px;
+}
+.ingrid-weight{
+  display: flex;
+  position: absolute;
+  right: 0;
+}

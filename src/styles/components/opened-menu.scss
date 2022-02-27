@@ -1,0 +1,47 @@
+.opened__menu {
+  display: none;
+  position: absolute;
+  background-color: #333537;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-size: rem(30px);
+  
+  font-weight: 400;
+
+}
+.opened__menu--active {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+
+}
+
+
+
+.menu__item {
+ 
+
+  &:last-child {
+    margin-right: 0;
+  }
+ 
+}
+
+.menu__link {
+  text-decoration: none;
+  white-space: nowrap;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.close-icon {
+  position: absolute;
+  top: rem(15px);
+  right: rem(20px);
+}
+/*.container-menu {
+  display: flex;
+  align-items: center;
+}
+*/

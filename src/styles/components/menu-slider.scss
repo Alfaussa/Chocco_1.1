@@ -1,0 +1,214 @@
+.menu-section {
+  background-color: #f8fafa;
+  flex-direction: row;
+  align-items: center;
+  @include tablets {
+    flex-direction: column;
+   
+  }
+  &:before {
+    position: absolute;
+    content: url("/images/menubarsleafbg.png");
+    right: 0;
+    top: 270%;
+  }
+
+  &:after  {
+    position: absolute;
+    content: url("/images/menu-bar-berry.png");
+    right: 0;
+    top: 295%;
+    }
+}
+.bx-wrapper {
+  border: 0;
+  background:transparent;
+  box-shadow: none;
+}
+.slider {
+  display: flex;
+
+@include tablets {
+
+align-items: center;
+  }
+  
+}
+.slider-item {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+      }
+}
+
+
+.menu-desc-item {
+  display: flex;
+  margin-bottom: rem(10px);
+  position: relative;
+
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+}
+
+.menu-desc {
+  display: flex;
+
+  @include tablets {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.menu-image {
+  margin-bottom: rem(80px);
+  width: 90%;
+  margin-right: rem(30px);
+  align-items: center;
+  display: flex;
+
+  @include tablets {
+    display: flex;
+    margin-right: 0;
+    width: 90%;
+    margin-bottom: rem(5px);
+    justify-content: center;
+  }
+  
+
+}
+
+.menu-img {
+  
+  
+  @include tablets {
+    margin: 0 rem(25px) 0 rem(10px);
+    width: 70%;
+  }
+
+}
+
+
+.ingrid-icon {
+  width: 86px;
+  height: fit-content;
+  text-align: center;
+  color: white;
+  background-color: $blue;
+  border-radius: rem(5px);
+  font-size: rem(15px);
+  font-weight: bold;
+
+  
+
+  &:hover + .ingrid-menu{ 
+    
+    display: block;
+  }
+
+  @include tablets {
+    display: none;
+  }
+  
+}
+.ingrid-icon span {
+  color: white;
+  font-weight: bold;
+}
+.menu__title h3 {
+
+  font-size: rem(36px);
+  line-height: 1;
+  text-align: start;
+  font-weight: 700;
+  margin-bottom: rem(20px);
+  text-transform: uppercase;
+  color: #000;
+
+  @include tablets {
+    font-size: rem(24px);
+    text-align: center;
+    margin-bottom: rem(5px);
+  }
+
+  @include phones {
+    font-size: rem(16px);
+  }
+}
+
+.menu-desc-text {
+  color: #666666;
+  line-height: 1.4;
+  margin-bottom: 0;
+
+  @include tablets {
+    font-size: rem(16px);
+    text-align: center;
+  }
+}
+
+
+
+.menu-desc-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-desc-detail__price {
+  font-size: rem(40px);
+  color: #151515;
+  font-weight: 300;
+
+  @include tablets {
+    font-size: rem(30px);
+  }
+}
+
+.menu-desc-detail {
+  align-items: center;
+  margin-right: rem(40px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ingrid-icon span {
+  color: white;
+  font-weight: bold;
+}
+.detail {
+  display: flex;
+  margin-right: 10px;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.slider-bar {
+  display: none;
+}
+
+.arrows {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  @include tablets {
+    top: 30%;
+  }
+}
+.arrow-left{
+  left: -5%;
+}
+.arrow-right{
+  right: -5%;
+}

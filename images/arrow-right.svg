@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 33" width="17" height="33">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ffffff;stroke-width: 2 } 
+	</style>
+	<g id="bar Chocco">
+		<g id="Стрелки">
+			<path id="arrow-scroll kопировать 2" class="shp0" d="M15.99 2.82L4.23 13.46C2.6 15.04 2.6 17.6 4.23 19.19L15.99 29.83" />
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,138 @@
+.hero {
+  background: url("/images/bg-leaf-hero.png") right bottom no-repeat;
+  background-color: $blue;
+  height: 100vh;
+  min-height: rem(650px);
+  color: #fff;
+  position: relative;
+
+  @include tablets {
+    background-position: right bottom 88% ;
+    }
+
+  &::before, &::after {
+    @include tablets {
+     display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: url("/images/falling-1-leaf.png");
+    bottom: rem(-80px);
+    left: 2%;
+  }
+  &::after {
+    position: absolute;
+    content: url("/images/CompositeLayer@1X.png");
+    bottom: rem(-60px);
+    right: 0;
+  }
+
+}
+.hero__title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 46%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: url("/images/hero-set-tablets.png");
+    
+    }
+  }
+  @include phones {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: url("/images/barph.png");
+      
+      
+    }
+  }
+}
+.hero__icons-section {
+@include tablets {
+display: none;
+}
+
+}
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 0 rem(45px) 0;
+  position: relative;
+  /*background: url("../decor/bars-hero.png") right center/50% auto no-repeat;*/
+}
+.hero__content {
+  display: flex;
+}
+.hero__main-title {
+  font-size: rem(48px);
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: rem(15px);
+  color: #fff;
+
+  @include phones {
+    font-size: rem(32px);
+  }  
+  &--hero {
+    text-align: left;
+  }
+}
+.hero__title-desc {
+  font-size: rem(21px);
+  margin-bottom: rem(28px);
+  padding-right: 10%;
+
+  @include tablets {
+    padding: 0 20%;
+    font-size: rem(21px);
+
+  }
+  @include phones {
+    padding: 0;
+    font-size: rem(16px);
+    line-height: 1;
+  }    
+
+}
+.hero__image {
+  display: flex;
+  width: 54%;
+  
+
+  /*margin-top: rem(0px);
+  margin-left: rem(0px);*/
+
+  @include tablets {
+    display: none;
+    }
+
+  @include phones {
+      display: none;
+  }
+}
+.hero__image-element {
+  position: relative;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,47 @@
+.section {
+  height: 100vh;
+  min-height: rem(650px);
+  min-width: rem(320px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+    min-height: 0;
+  }
+
+  &--font-color-green{
+    color: $darkgreen;
+
+    .section__title {
+      color: inherit;
+    }
+  }
+}
+
+
+.section__title {
+  font-size: rem(48px);
+  font-weight: bold;
+  margin-bottom: rem(60px);
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+
+  @include phones {
+    width: 100%;
+    font-size: rem(30px);
+    margin-bottom: rem(30px);
+  }
+}
+.section__title--green {
+  color: $darkgreen;
+  font-size: rem(40px);
+
+  @include phones {
+    font-size: rem(20px);
+  }
+}

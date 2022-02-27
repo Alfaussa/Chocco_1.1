@@ -1,0 +1,287 @@
+@mixin tablets {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width:480px) {
+    @content;
+  }
+}
+
+
+.video {
+  position: relative;
+  background-color: #f8faf9;
+  &::before {
+    position: absolute;
+    content: url("/images/leaf-pattern2.png");
+    left: 0;
+    top: -10%;
+  }
+
+  &::after {
+    position: absolute;
+    content: url("/images/berries5.png");
+    left: 0;
+    top: -10%;
+  }
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+.player {
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+  width: 100%;
+  height: 406px;
+  position: relative;
+
+  @include tablets {
+    width: 95%;
+  }
+
+  @include phones {
+    max-height: 295px;
+  }
+  &::before {
+    position: absolute;
+    content: url("../images/falling-1-leaf.png");
+    left: -10%;
+    bottom: -33%;
+  }
+  &::after {
+    position: absolute;
+    content: url("../images/leaf-player-up.png");
+    right: -10%;
+    top: -20%;
+  }
+}
+.player__splash__play {
+  display: block;
+      top: 40%;
+    /* bottom: 0; */
+    left: 45%;
+  
+z-index: 100;
+  position: absolute;
+  width: rem(60px);
+  height: rem(60px);;
+}
+
+.player__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.player__elem {
+  width: 100%;
+  height: 100%;
+}
+
+.player__splash {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
+  top:0;
+}
+
+
+.player__splash img {
+  width: 100%;
+  height: 90%;
+  
+}
+
+.active .player__splash {
+  display: none;
+}
+
+.active .player__splash > .player__splash__play{
+  display: none;
+}
+
+
+
+.player__controls {
+  display: flex;
+  flex-direction: row;
+  background-color: #404040;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+
+  @include phones {
+    justify-content: space-between;
+  }
+}
+
+.player__playback {
+  display: flex;
+  align-items: center;
+}
+
+
+.player__start {
+  width: 55px;
+  height: 100%;
+  border: none;
+  background: url("/images/icons/play.svg") center no-repeat;
+  background-size: 30%;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.player--paused {
+  background: #3e3e3e;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    left: 30%;
+    top: 30%;
+    height: 50%;
+    background: #626262;
+
+    @include phones {
+      width: 3px;
+      height: 70%;
+      
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 40%;
+    top:30%;
+    width: 5px;
+    height: 50%;
+    background: #626262;
+    @include phones {
+      
+      height: 70%;
+      width: 3px;
+    }
+  }
+}
+
+.player__start:hover {
+  cursor: pointer;
+}
+
+.player__playback {
+  width: 68%;
+  position: relative;
+  margin-right: 15px;
+
+  @include phones {
+    width: 35%;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    display: block;
+    background: url("/images/video.png") no-repeat;
+  }
+}
+
+.player__playback-button {
+  background: #626262;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.player__volume {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 20%;
+
+  @include phones {
+    width: 33%;
+  }
+}
+
+.volume__pic {
+  width: 40px;
+  height: 20px;
+  border: none;
+  background: url("/images/Volume.png") no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+// .volume__pic--nosound {
+//   background: url() no-repeat;
+//   background-position: center;
+// }
+
+.volume__playback {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 90%;
+    height: 4px;
+    position: absolute;
+    display: block;
+    background: url("/images/sound.png") no-repeat;
+  }
+}
+
+.volume__playback-button {
+  background: #626262;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+
+}
+
+
+iframe#yt-player {
+
+  @include tablets {
+    width: 100%;
+  }
+
+
+}

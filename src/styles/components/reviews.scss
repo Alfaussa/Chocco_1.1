@@ -1,0 +1,213 @@
+.reviews__display {
+  background: #f8f5f9;
+  padding: rem(50px) rem(45px) rem(54px);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: rem(50px);
+  display: flex;
+  justify-content: center;
+  min-height: 45vh;
+
+  @include tablets {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 45vh;
+  }
+  @include phones {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: rem(25px);
+  height: 55vh;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: rem(90px);
+    height: rem(90px);
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(-65px);
+  }
+
+  
+  // &::after {
+  // content: url("../images/grey-pattern-berries.png");
+  // position: absolute;
+  // top: rem(0px);
+  // right:0;
+
+  @include phones {
+    content: url("/images/berry-pat-phone.png");
+    width: 35%;
+  }
+  }
+
+
+.reviews__avatar {
+  display: flex;
+  width: rem(250px);
+  height: rem(260px);
+  margin-bottom: rem(15px);
+
+  @include tablets {
+    width: rem(130px);
+    height: rem(130px);
+    margin-bottom: 0;
+  }
+}
+.interactive-avatar__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.reviews__content {
+  flex:1;
+  margin-left: rem(20px);
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    margin-left: rem(40px);
+    min-width: 100%;
+  }
+  @include phones {
+    margin-left: 0;
+    min-width: 100%;
+  }
+
+  
+}
+.reviews__title{
+  font-size: rem(30px);
+  font-weight: bold;
+  margin-bottom: rem(10px);
+  color: #000000;
+  padding-top: rem(20px);
+  text-align: left;
+  z-index: 1000;
+
+  @include phones {
+    text-align: center;
+  }
+
+}
+.review__text {
+  margin-bottom: rem(36px);
+  font-size: 14px;
+  width: 85%;
+  text-align: left;
+  z-index: 100;
+
+  @include tablets {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: rem(10px);
+    width: 100%;
+  }
+  @include phones {
+    font-size: 11px;
+  }
+}
+.reviews__author {
+  font-size: rem(18px);
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+  @include tablets {
+
+    text-align: center;
+
+  }
+}
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(40px);
+ 
+}
+.reviews__display {
+display: flex;
+justify-content: center;
+
+@include tablets {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+@include phones {
+  margin-bottom: 0;
+  padding: rem (15px);
+}
+}
+.reviews__list {
+  position: relative;
+  min-height: rem(280px);
+}
+
+.reviews-item {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .3s;
+  opacity: 0;
+}
+.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
+.inner-review {
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.reviews-switcher__item {
+  width: rem(80px);
+  height: rem(80px);
+  /*border: rem(6px) solid #0f5a47;*/
+  border: rem(6px) solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0f5a47;
+  }
+}
+.reviews-switcher__item.active{
+  background-color: #0f5a47;
+}
+.avatar__img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reviews-section {
+  position: relative;
+  @include tablets {
+    min-height: 100vh;
+  }
+  &::before {
+    position: absolute;
+    content: url("../images/berrySet.png");
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+}
+  

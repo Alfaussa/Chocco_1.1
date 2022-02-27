@@ -1,0 +1,146 @@
+.order-section {
+
+  &::after {
+    position: absolute;
+    content: url("/images/bigleave.png");
+    right: 0;
+    bottom: 10%;
+
+    @include tablets {
+    display: none;
+    }
+
+  }
+
+  &::before {
+    position: absolute;
+    content: url("/images/buket.png");
+    right:-4%;
+    top: -23%;
+  }
+}
+.form__cont {
+  display: flex;
+  margin-bottom: rem(50px);
+  position: relative;
+  
+
+  @include tablets {
+    padding: 0 19%;
+    flex-direction: column;
+  }
+
+  @include phones {
+    font-size: 12px;
+    padding: 0;
+    flex-direction: column;
+  }
+ 
+  
+}
+.form__col {
+  flex: 1;
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+  }
+  &::before {
+    position: absolute;
+    content: url("/images/1berry.png");
+    left: -7%;
+    bottom: -45%;
+
+    @include tablets {
+      display: none;
+    }
+  }
+}
+.form__row {
+  display: flex;
+  margin-bottom: rem(18px);
+
+  @include tablets {
+    margin-bottom: 0;
+  }
+
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+.form__block {
+  flex: 1;
+  margin-right: rem(20px);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.form__input {
+  width: 100%;
+  border: 0;
+  padding: rem(18px) rem(11px);
+ // border: solid rem(3px) 
+  border: solid rem(3px) transparent;
+
+  &.input-error{
+    border-color: hotpink;
+  }
+  &:focus {
+  border-color: #dee2bd;
+  outline: none;
+  }
+
+  &--textarea {
+    height: rem(180px);
+    resize: none;
+    @include phones {
+      height: rem(90px);
+      margin-bottom: rem(19px);
+    }
+
+    @include phones {
+      height: rem(120px);
+    }
+  }
+
+  @include phones {
+    padding: rem(9px) rem(10px); 
+    border: solid rem(2px) transparent;
+  }
+  @include tablets{
+    padding: rem(9px) rem(10px); 
+    border: solid rem(2px) transparent;
+  }
+}
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(15px);
+
+  @include phones {
+    justify-content: center;
+  }
+
+  &:last-child {
+    margin-bottom: rem(20px);
+  }
+}
+.form__btns {
+  display: flex;
+  justify-content: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+.container-form {
+  position: relative;
+ 
+}

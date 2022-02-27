@@ -1,0 +1,47 @@
+$containerwidth: 940px;
+$baseFontSize: 18px;
+
+$tablets: 768px;
+$phones: 480px;
+
+$blue: #61c4d9;
+$darkgreen: #0b4d3c;
+
+$z-fixed-menu:100;
+
+@import "layout/media";
+
+@import "layout/fonts";
+@import "normalize";
+
+
+@import "layout/base";
+
+@import "components/hero.scss";
+@import "components/header";
+@import "components/benefits";
+@import "components/benefit";
+@import "components/button";
+@import "components/section";
+@import "components/headline";
+@import "components/features";
+@import "components/feature";
+@import "components/reviews";
+@import "components/interactive-avatar";
+@import "components/form";
+@import "components/radio";
+@import "components/order";
+@import "components/features-section";
+@import "components/fixed-menu";
+@import "components/hamburger";
+@import "components/map";
+@import "components/footer";
+@import "components/icons";
+@import "components/opened-menu";
+@import "components/menu-slider";
+@import "components/ingrid-menu";
+@import "components/team";
+@import "components/modal";
+@import "components/products-menu";
+@import "components/player.scss";
+

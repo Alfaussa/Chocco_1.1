@@ -1,0 +1,45 @@
+.features {
+  display: flex;
+
+  @include phones {
+
+    flex-direction: column;
+   
+  }
+}
+.features__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+
+  @include phones {
+    padding: 0;
+    display: inline-flex;
+  }
+
+  &::before {
+    content: url("/images/divider.png");
+    position: absolute;
+    top: rem(48px);
+    right: 0;
+    transform: translateX(50%);
+    
+    @include phones {
+    content:"";
+    }
+    @include tablets {
+      content:"";
+      }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

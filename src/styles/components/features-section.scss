@@ -1,0 +1,27 @@
+.features-section {
+position: relative;
+background: url("/images/bg-leaf1.png") left top 57% no-repeat;
+
+  @include phones {
+  background: none;
+  }
+  @include tablets {
+    background: url("/images/bg-leaf1.png") left top 10% no-repeat;
+  }
+
+
+&::before {
+  content: url("/images/berry-bar.png");
+  position: absolute;
+  bottom: rem(-100px);
+  left: 0;
+  z-index: 10000;
+  }
+  &::before{
+    @include phones {
+     display: none;
+    }
+
+}
+
+}

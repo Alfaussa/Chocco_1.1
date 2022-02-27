@@ -1,0 +1,52 @@
+.button {
+  font-size: rem(19px);
+  font-weight: bold;
+  padding: rem(18px) rem(35px);
+  text-transform: uppercase;
+  border-radius: rem(100px);
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+  &--theme--white {
+    background: #fff;
+    color: $darkgreen;
+    align-self: flex-start;
+
+    @include tablets  {
+      align-self: center;
+    }
+    @include phones  {
+      align-self: center;
+    }
+  }
+  
+  &:hover {
+    color: #fff;
+    background: green;
+
+    
+  }
+
+  &--theme--green {
+    background: $darkgreen;
+    color: #fff;
+
+    &:hover {
+      color: $darkgreen;
+      background:  #fff;
+
+    }
+  }
+  &--theme--transparent {
+    background: transparent;
+    color: $darkgreen;
+    text-transform: none;
+    font-weight: 400;
+
+    &:hover {
+      color: $darkgreen;  
+    }
+  }  
+}
