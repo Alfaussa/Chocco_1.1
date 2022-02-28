@@ -23,8 +23,8 @@ task('copy:html', () => {
    .pipe(reload({ stream: true }));
 })
 
-task ('copy:image',  () => {
-  return src('src/image/*.*').pipe(dest('dist/image'))
+task ('copy:images',  () => {
+  return src('src/images/*.*').pipe(dest('dist/images'))
 });
 
 
@@ -64,4 +64,4 @@ task('server', () => {
 watch('./src/styles/**/*.scss', series('styles'));
 watch('./src/*.html', series('copy:html'));
  
-task('default', series('clean', 'copy:html','copy:image', 'styles', 'scripts', 'server'));
+task('default', series('clean', 'copy:html','copy:images', 'styles', 'scripts', 'server'));

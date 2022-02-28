@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 7" width="61" height="7">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #626262 } 
+	</style>
+	<g id="how we are working">
+		<g id="Видео">
+			<g id="Плеер">
+				<path id="Шкала звука" class="shp0" d="M3 2L59 2C59.55 2 60 2.44 60 3L60 5C60 5.55 59.55 6 59 6L3 6C2.45 6 2 5.55 2 5L2 3C2 2.44 2.45 2 3 2Z" />
+			</g>
+		</g>
+	</g>
+</svg>
